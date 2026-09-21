@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 16px;
+}
+
+body {
+	min-height: 100dvh;
+	background: url(images/background.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-color: #000;
+	backdrop-filter: blur(1px);
+	color: whitesmoke;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	text-align: center;
+	font-family: "VT323", monospace;
+	font-size: 2.375rem;
+	padding: 1rem;
+}
+
+.game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 95%;
+	max-width: 1200px;
+	flex-grow: 1;
+	padding: 1rem 0;
+}
+
+.head {
+	margin: 20px 0;
+}
+.head h1 {
+	font-size: 6.25rem;
+	margin-bottom: 0.1em;
+}
+.head h3 {
+	font-size: 1.875rem;
+	margin-top: 0.1em;
+}
+
+.cards {
+	width: 100%;
+	max-width: 900px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.25rem;
+	margin-bottom: 1.875rem;
+}
+
+.card {
+	flex: 1 1 200px;
+	max-width: 250px;
+	min-width: 150px;
+	padding: 1rem;
+	background: #583925;
+	border: #e7ac7c 6px solid;
+	box-shadow: 0 5px 10px 1px black;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.images {
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+	display: block;
+	margin: 0 auto 0.5rem;
+}
+.card p {
+	margin: 0;
+	font-size: 1em;
+}
+.card:hover {
+	background: #bf8857;
+	transform: translateY(-10px) scale(1.05);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.25rem 0.625rem;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	gap: 1.25rem;
+}
+.container .images {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.875rem;
+	justify-content: center;
+	align-items: center;
+}
+.choice-img {
+	width: 200px;
+	height: 200px;
+}
+
+.score {
+	background: url(images/wood.jpg);
+	margin-top: 1.25rem;
+	box-shadow: 0 0 10px 3px black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	max-width: 750px;
+}
+.players {
+	flex: 1 1 300px;
+	min-width: 280px;
+	padding: 1rem 0.625rem;
+	min-height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	filter: drop-shadow(3px 3px rgba(0, 0, 0, 0.4));
+	text-align: center;
+}
+
+.photo {
+	height: 200px;
+	width: auto;
+}
+
+.reset {
+	font-family: "VT323", monospace;
+	font-size: 2.375rem;
+	background-color: #e7ac7c;
+	border: black 3px solid;
+	padding: 0.625rem 1.875rem;
+	margin: 1.875rem 0 0.625rem;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.reset:hover {
+	background-color: #bf8857;
+	transform: translateY(-3px);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+	html {
+		font-size: 20px;
+	}
+	body {
+		font-size: 1.714rem;
+		padding: 0.5rem;
+	}
+
+	.head h1 {
+		font-size: 4rem;
+	}
+	.head h3 {
+		font-size: 1.285rem;
+	}
+
+	.cards {
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem;
+	}
+	.card {
+		flex: 0 0 auto;
+		width: 40%;
+		max-width: 200px;
+		padding: 0.75rem;
+	}
+
+	.score {
+		flex-wrap: wrap;
+		max-width: 98%;
+	}
+	.players {
+		width: 100%;
+		padding: 0.75rem 0.5rem;
+		min-height: 100px;
+	}
+	.player.players {
+		border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.photo,
+	.choice-img {
+		width: 90px;
+	}
+	.reset {
+		font-size: 1.4rem;
+	}
+}
